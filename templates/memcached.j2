@@ -1,0 +1,34 @@
+# {{ ansible_managed }}
+
+MEMCACHED_BINARY="/usr/bin/memcached"
+
+# User to run as.
+MEMCACHED_RUNAS="memcached"
+
+# Max memory to use for items in megabytes (default: 64 MB).
+MEMUSAGE="{{ memcached_memory_max }}"
+
+# Max simultaneous connections (default: 1024).
+MAXCONN="1024"
+
+# Network interface to listen on (default: 0.0.0.0).
+#LISTENON=""
+
+# TCP port number to listen on (default: 11211).
+#PORT="11211"
+
+# UDP port number to listen on (default: 11211, 0 is off).
+#UDPPORT="${PORT}"
+
+# UNIX socket path to listen on. When not empty, listening on TCP/IP will be disabled!
+SOCKET="{{ memcached_socket_path }}"
+
+# Access mask for UNIX socket, in octal (default: 0700).
+SOCKET_MASK="{{ memcached_socket_mask }}"
+
+# PID file location.
+# Note that '-${PORT}.${CONF}.pid' will be appended to this!
+PIDBASE="/run/memcached/memcached"
+
+# Other Options.
+MISC_OPTS=""

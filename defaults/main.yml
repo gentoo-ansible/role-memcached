@@ -1,0 +1,9 @@
+---
+# Max memory to use for cache items (in megabytes).
+memcached_memory_max: 64
+
+# Unix socket path to listen on.
+memcached_socket_path: /run/memcached/memcached.sock
+
+# Access mask for unix socket, in octal.
+memcached_socket_mask: '0750'
